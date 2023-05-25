@@ -46,7 +46,12 @@ function Nav() {
         Javascript
       </a>
           </div>
-      <div style={{color:"antiquewhite"}}>Current Lang - {lang.toUpperCase()=="CPP"?"C++":lang.toUpperCase()=="PY"? " Python " : lang.toUpperCase()=="JAVA" ?"Java":"Javascript"}</div>
+
+<h1 style={{display:`${ window.innerWidth>=600 ?"visible":"none"}`, padding:"0px",margin:"0px", color:"darksalmon"}}>
+Dev's Compiler
+</h1>
+
+      <div style={{color:"antiquewhite",display:`${ window.innerWidth>=600 ?"visible":"none"}`}}>Current Lang - {lang.toUpperCase()=="CPP"?"C++":lang.toUpperCase()=="PY"? " Python " : lang.toUpperCase()=="JAVA" ?"Java":"Javascript"}</div>
     </div>
   );
 }
