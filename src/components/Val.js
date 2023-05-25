@@ -4,12 +4,12 @@ import { MyContext } from "./MyContext";
 // var axios = require('axios');
 function Val() {
   // MyContext
-  const { lang , setlang , input , setinput ,code ,setcode ,res,setres } = useContext(MyContext);
+  const { lang , setlang , input , setinput ,code ,setcode ,res,setres ,dis, setdis } = useContext(MyContext);
  
-  // console.log(code,input,code);
+  console.log(lang);
 
   const handleclick = () => {
-
+    setdis("");
     let data = {
       code: code,
       language: lang,
@@ -30,9 +30,11 @@ function Val() {
       .then(function (response) {
         console.log(JSON.stringify(response.data));
         setres(response.data);
+        setdis("Dis");
       })
       .catch(function (error) {
         console.log(error);
+        setdis("Dis");
       });
   };
   return (
